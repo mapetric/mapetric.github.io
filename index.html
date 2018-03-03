@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+      <title>Matching Game</title>
+      <meta name="description" content="">
+      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+      <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+      <link rel="stylesheet" href="css/app.css">
+
+      <!-- added the css stylesheet for the added and modified code -->
+
+      <link rel="stylesheet" href="css/modified.css">
+</head>
+<body>
+      <div id="myModal" class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2>Congratulations!</h2>
+            </div>
+            <div class="modal-body">
+                  <p>You won in
+                        <span id="modal-moves">0 Moves, </span>
+                        <span id="modal-time">0 mins 0 secs</span>
+                  </p>
+            <div class="score-panel">
+                  <ul class="stars" id="modal-stars">
+                        <li><i class="star fa fa-star"></i></li>
+                        <li><i class="star fa fa-star"></i></li>
+                        <li><i class="star fa fa-star"></i></li>
+                  </ul>
+                  </div>
+                        <p>Close this window to restart</p>
+                  </div>
+            </div>
+      </div>
+
+
+      <div class="container">
+            <header>
+                  <h1>Matching Game</h1>
+            </header>
+
+            <section class="score-panel">
+                  <span id="timer">0 mins 0 secs</span>
+                  <ul class="stars">
+                        <li><i class="star fa fa-star"></i></li>
+                        <li><i id="star2" class="star fa fa-star"></i></li>
+        		      <li><i id="star3" class="star fa fa-star"></i></li>
+                  </ul>
+
+                  <span id="movesCounter">0</span> Moves
+
+                  <div class="restart">
+                        <i id="reset" class="fa fa-repeat"></i>
+                  </div>
+            </section>
+
+            <ul class="deck">
+                  <li id="card-0" class="card"></li>
+                  <li id="card-1" class="card"></li>
+                  <li id="card-2" class="card"></li>
+                  <li id="card-3" class="card"></li>
+                  <li id="card-4" class="card"></li>
+                  <li id="card-5" class="card"></li>
+                  <li id="card-6" class="card"></li>
+                  <li id="card-7" class="card"></li>
+                  <li id="card-8" class="card"></li>
+                  <li id="card-9" class="card"></li>
+                  <li id="card-10" class="card"></li>
+                  <li id="card-11" class="card"></li>
+                  <li id="card-12" class="card"></li>
+                  <li id="card-13" class="card"></li>
+                  <li id="card-14" class="card"></li>
+                  <li id="card-15" class="card"></li>
+            </ul>
+      </div>
+
+
+<!-- added the script tags for jquerey and settings -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="js/settings.js"></script>
+      <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+
+/* modal */
+
+/* background */
+
+.modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4);
+}
+
+/* Content */
+
+.modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s;
+}
+
+
+
+/* Add Modal Animation */
+@-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+}
+
+/* The Close Button */
+
+.close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+      text-decoration: none;
+      color: #000;
+      cursor: pointer;
+}
+
+/* Modal content */
+
+.modal-header {
+      padding: 2px 16px;
+      background-color: #02b3e4;
+      color: white;
+}
+
+.modal-body {
+      padding: 2px 16px;
+}
+
+
+
+/* animations */
+
+/* older versions */
+
+@-webkit-keyframes wrong {
+      from {
+            transform: translate(-10px);
+            background-color: #a52a2a;
+      }
+      25% {
+            transform: translate(10px);
+            background-color: red;
+      }
+      50% {
+            transform: translate(-10px);
+            background-color: #a52a2a;
+      }
+      to {
+            transform: translate(10px);
+            background-color: red;
+      }
+}
+
+@-webkit-keyframes match {
+      from {
+            transform: scale(1.05);
+            background-color: green;
+      }
+      25% {
+            transform: scale(0.95);
+            background-color: lime;
+      }
+      50% {
+            transform: scale(1.05);
+            background-color: green;
+      }
+      to {
+            transform: scale(0.95);
+            background-color: lime;
+      }
+}
+
+@-webkit-keyframes flipInY {
+	from {
+		transform: rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+	}
+
+	40% {
+		transform: rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		transform: rotate3d(0, 1, 0, 10deg);
+	}
+
+	80% {
+		transform: rotate3d(0, 1, 0, -5deg);
+	}
+
+	to {
+		transform: rotate3d(0, 1, 0, 0deg);
+	}
+}
+
+/* new versions */
+
+@keyframes wrong {
+      from {
+            transform: translate(-10px);
+            background-color: #a52a2a;
+      }
+      25% {
+            transform: translate(10px);
+            background-color: red;
+      }
+      50% {
+            transform: translate(-10px);
+            background-color: #a52a2a;
+      }
+      to {
+            transform: translate(10px);
+            background-color: red;
+      }
+}
+
+@keyframes match {
+      from {
+            transform: scale(1.05);
+            background-color: green;
+      }
+      25% {
+            transform: scale(0.95);
+            background-color: lime;
+      }
+      50% {
+            transform: scale(1.05);
+            background-color: green;
+      }
+      to {
+            transform: scale(0.95);
+            background-color: lime;
+      }
+}
+
+@keyframes flipInY {
+	from {
+		transform: rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+	}
+
+	40% {
+		transform: rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		transform: rotate3d(0, 1, 0, 10deg);
+	}
+
+	80% {
+		transform: rotate3d(0, 1, 0, -5deg);
+	}
+
+	to {
+		transform: rotate3d(0, 1, 0, 0deg);
+	}
+}
+
+/* classes that trigger the animantions */
+
+.wrong {
+      animation-name: wrong;
+      animation-duration: 1s;
+}
+
+.rotate {
+      animation-name: flipInY;
+      animation-duration: 1s;
+}
+
+
+/* modified and added css */
+
+/* sets the color of the stars */
+
+.star {
+      color: #02ccba;
+}
+
+/* elements with this class wont trigger pointer event (ex. click) */
+
+.disabled {
+      pointer-events: none;
+}
+
+/* added the animation */
+
+.deck .card.match {
+      animation-name: match;
+      animation-duration: 1s;
+      cursor: default;
+      background: #02ccba;
+      font-size: 33px;
+}
+/* made it mobile first friendly */
+
+.deck {
+    width: 350px;
+    min-height: 350px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 60px;
+    width: 60px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+
+/* media query that enlarges the cards */
+
+@media (min-width: 425px) {
+	.deck {
+            width: 660px;
+            min-height: 680px;
+	}
+
+	.deck .card {
+            height: 125px;
+            width: 125px;
+	}
+
+      .deck .card.show {
+          font-size: 50px;
+      }
+      .deck .card.match {
+            font-size: 50px;
+      }
+}
